@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var messageField: UITextField!
     @IBOutlet weak var mailButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -28,6 +29,10 @@ class ViewController: UIViewController {
 
     @IBAction func sendMail(sender: UIButton) {
         // Button actions!
+        nameLabel.hidden = false;
+        nameLabel.textColor = UIColor.blueColor();
+        nameLabel.text = "To: " + nameField.text;
+        nameField.text = "";
         messageLabel.hidden = false;
         messageLabel.text = messageField.text;
         messageField.text = "";
