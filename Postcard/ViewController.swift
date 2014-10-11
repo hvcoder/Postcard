@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMail(sender: UIButton) {
+        // Button actions!
         messageLabel.hidden = false;
         messageLabel.text = messageField.text;
         messageField.text = "";
